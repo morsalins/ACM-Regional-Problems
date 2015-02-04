@@ -63,15 +63,6 @@ using namespace std;
 #define IAMHERE cout << "YES\n";
 #define DEBUG(a, b) cout << a << ": " << b << "\n";
 
-int countIT( string T ){
-
-    int cnt = 0;
-    for(int i=0; i<T.size(); i++){
-            if( T[i] == '1' ) cnt++;
-    }
-    return cnt;
-}
-
 int main()
 {
     //READ("in.txt");
@@ -81,14 +72,13 @@ int main()
     int tc; scanf("%d", &tc);
 
     while( tc-- ){
+
         scanf("%d", &m);
+
         int q, d, n, p;
-        q = m/25;
-        m = m%25;
-        d = m/10;
-        m = m %10;
-        n = m/5;
-        m = m%5;
+        q = m/25; m = m%25;
+        d = m/10; m = m %10;
+        n = m/5; m = m%5;
         p = m;
 
         printf("%d %d QUARTER(S), %d DIME(S), %d NICKEL(S), %d PENNY(S)\n", Case++, q, d, n, p);
